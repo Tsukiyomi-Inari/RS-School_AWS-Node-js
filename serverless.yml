@@ -1,3 +1,5 @@
+org: tsukiyomi0inari
+app: node-in-aws-web
 service: node-in-aws-web
 
 frameworkVersion: '2'
