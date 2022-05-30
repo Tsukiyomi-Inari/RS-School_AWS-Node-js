@@ -1,10 +1,10 @@
 service: node-in-aws-web
 
-frameworkVersion: '2'
+frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs17.x
   # setup profile for AWS CLI.
   # profile: node-aws
 
@@ -17,20 +17,20 @@ plugins:
 
 custom:
   client:
-    bucketName: node-in-aws-web-bucket
-    distributionFolder: build
-  s3BucketName: ${self:custom.client.bucketName}
+    bucketName: node-in-aws-web-bucket101
+    distributionFolder: public
+  s3Bucket: node-in-aws-web-bucket
 
   ## Serverless-single-page-app-plugin configuration:
-  s3LocalPath: ${self:custom.client.distributionFolder}/
+  s3LocalPath: dist/
 
 resources:
   Resources:
     ## Specifying the S3 Bucket
-    WebAppS3Bucket:
+    WebAppS3Bucket: 
       Type: AWS::S3::Bucket
       Properties:
-        BucketName: ${self:custom.s3BucketName}
+        BucketName: ${custom.s3BucketName}
         AccessControl: PublicRead
         WebsiteConfiguration:
           IndexDocument: index.html
@@ -49,7 +49,7 @@ resources:
             - Sid: 'AllowCloudFrontAccessIdentity'
               Effect: Allow
               Action: s3:GetObject
-              Resource: arn:aws:s3:::${self:custom.s3BucketName}/*
+              Resource: arn:aws:s3:::${custom.s3BucketName}/*
               Principal:
                 AWS:
                   Fn::Join:
@@ -76,9 +76,9 @@ resources:
               S3OriginConfig:
                 OriginAccessIdentity: !Sub origin-access-identity/cloudfront/${OriginAccessIdentity}
              # CustomOriginConfig:
-             #   HTTPPort: 80
-             #   HTTPSPort: 443
-             #   OriginProtocolPolicy: https-only
+                HTTPPort: 80
+                HTTPSPort: 443
+                OriginProtocolPolicy: https-only
           Enabled: true
           IPV6Enabled: true
           HttpVersion: http2
