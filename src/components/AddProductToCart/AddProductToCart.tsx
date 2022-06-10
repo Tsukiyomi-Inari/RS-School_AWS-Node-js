@@ -8,6 +8,7 @@ import IconButton from "@material-ui/core/IconButton";
 import {useDispatch, useSelector} from "react-redux";
 import {addToCart, selectCartItems, removeFromCart} from "../../store/cartSlice";
 
+
 type AddProductToCartProps = {
   product: Product
 };

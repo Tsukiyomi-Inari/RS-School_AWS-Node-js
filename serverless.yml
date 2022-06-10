@@ -1,6 +1,6 @@
 service: node-in-aws-web
 
-frameworkVersion: '3'
+frameworkVersion: '3.19.0'
 
 provider:
   name: aws

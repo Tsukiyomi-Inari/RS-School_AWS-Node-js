@@ -5,6 +5,7 @@ import Link from '@material-ui/core/Link';
 import Container from "@material-ui/core/Container";
 import Header from "../../components/MainLayout/components/Header";
 
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -27,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(6),
   },
 }));
+
+
 
 const MainLayout: React.FC = ({children}) => {
   const classes = useStyles();
