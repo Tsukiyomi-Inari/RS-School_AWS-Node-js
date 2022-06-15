@@ -13,13 +13,15 @@ import PageOrders from "components/pages/PageOrders/PageOrders";
 import PageOrder from "components/pages/PageOrder/PageOrder";
 import PageProductImport from "components/pages/admin/PageProductImport/PageProductImport";
 
+
+
 function App() {
 
   return (
     <Router>
       <Switch>
         <Route path="/">
-          <MainLayout>
+          <MainLayout >
             <Route exact path="/">
               <PageProducts/>
             </Route>

@@ -1,22 +1,25 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import Container from "@material-ui/core/Container";
 import Header from "components/MainLayout/components/Header";
+import { themeX } from 'utils/theme/appTheme';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
-        My Store
+        Tsukiyomi-Inari
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>
   );
 }
+
+
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -34,6 +37,7 @@ const MainLayout: React.FC = ({children}) => {
   return (
     <>
       <Header/>
+    <ThemeProvider theme={themeX}>
       <main>
         <Container className={classes.container} maxWidth="md">
           {children!}
@@ -45,6 +49,7 @@ const MainLayout: React.FC = ({children}) => {
         </Typography>
         <Copyright/>
       </footer>
+      </ThemeProvider>
     </>
   );
 };
