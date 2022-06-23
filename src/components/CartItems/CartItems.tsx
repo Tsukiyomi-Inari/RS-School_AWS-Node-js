@@ -4,9 +4,9 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import {makeStyles} from "@material-ui/core/styles";
-import {CartItem} from "models/CartItem";
-import {formatAsPrice} from "utils/utils";
-import AddProductToCart from "components/AddProductToCart/AddProductToCart";
+import {CartItem} from "../../models/CartItem";
+import {formatAsPrice} from "../../utils/utils";
+import AddProductToCart from "../../components/AddProductToCart/AddProductToCart";
 
 const useStyles = makeStyles((theme) => ({
   listItem: {

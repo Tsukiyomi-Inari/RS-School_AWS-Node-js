@@ -4,7 +4,7 @@ import IconButton from "@material-ui/core/IconButton";
 import React, { useEffect } from "react";
 import axios from 'axios';
 import { useDispatch, useSelector } from "react-redux";
-import { selectCartItems, updateFromApi } from "store/cartSlice";
+import { selectCartItems, updateFromApi } from "../../../store/cartSlice";
 import { Link } from 'react-router-dom';
 import API_PATHS from "../../../constants/apiPaths";
 
