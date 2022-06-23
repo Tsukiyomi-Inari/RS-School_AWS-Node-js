@@ -2,9 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import CartItems from "components/CartItems/CartItems";
+import CartItems from "../../../../components/CartItems/CartItems";
 import {FormikValues} from "formik";
-import {CartItem} from "models/CartItem";
+import {CartItem} from "../../../../models/CartItem";
 
 const useStyles = makeStyles((theme) => ({
   title: {

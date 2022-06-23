@@ -1,17 +1,17 @@
 import React from 'react';
-import 'components/App/App.css';
-import PageProducts from "components/pages/PageProducts/PageProducts";
-import MainLayout from "components/MainLayout/MainLayout";
+import '../../components/App/App.css';
+import PageProducts from "../../components/pages/PageProducts/PageProducts";
+import MainLayout from "../../components/MainLayout/MainLayout";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import PageProductForm from "components/pages/PageProductForm/PageProductForm";
-import PageCart from "components/pages/PageCart/PageCart";
-import PageOrders from "components/pages/PageOrders/PageOrders";
-import PageOrder from "components/pages/PageOrder/PageOrder";
-import PageProductImport from "components/pages/admin/PageProductImport/PageProductImport";
+import PageProductForm from "../../components/pages/PageProductForm/PageProductForm";
+import PageCart from "../../components/pages/PageCart/PageCart";
+import PageOrders from "../../components/pages/PageOrders/PageOrders";
+import PageOrder from "../../components/pages/PageOrder/PageOrder";
+import PageProductImport from "../../components/pages/admin/PageProductImport/PageProductImport";
 
 function App() {
 
@@ -20,22 +20,22 @@ function App() {
       <Switch>
         <Route path="/">
           <MainLayout>
-            <Route exact path="/">
+            <Route  path="/">
               <PageProducts/>
             </Route>
-            <Route exact path={["/admin/product-form/:id", '/admin/product-form']}>
+            <Route path={["/admin/product-form/:id", "/admin/product-form"]}>
               <PageProductForm/>
             </Route>
-            <Route exact path="/cart">
+            <Route  path="/cart">
               <PageCart />
             </Route>
-            <Route exact path="/admin/orders">
+            <Route  path="/admin/orders">
               <PageOrders />
             </Route>
-            <Route exact path="/admin/order/:id">
+            <Route  path="/admin/order/:id">
               <PageOrder />
             </Route>
-            <Route exact path="/admin/products">
+            <Route  path="/admin/products">
               <PageProductImport />
             </Route>
           </MainLayout>

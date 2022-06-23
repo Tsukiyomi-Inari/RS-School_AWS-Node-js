@@ -3,12 +3,13 @@ import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import Container from "@material-ui/core/Container";
-import Header from "components/MainLayout/components/Header";
+import Header from "../../components/MainLayout/components/Header";
+
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
+      {'Copyright ©  Tsukiyomi-Inari'}
       <Link color="inherit" href="https://material-ui.com/">
         My Store
       </Link>{' '}
@@ -27,6 +28,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(6),
   },
 }));
+
+
 
 const MainLayout: React.FC = ({children}) => {
   const classes = useStyles();
