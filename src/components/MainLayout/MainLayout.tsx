@@ -9,7 +9,7 @@ import { themeX } from 'utils/theme/appTheme';
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
+      {'Copyright ©  Tsukiyomi-Inari'}
       <Link color="inherit" href="https://material-ui.com/">
         Tsukiyomi-Inari
       </Link>{' '}
@@ -30,6 +30,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(6),
   },
 }));
+
+
 
 const MainLayout: React.FC = ({children}) => {
   const classes = useStyles();

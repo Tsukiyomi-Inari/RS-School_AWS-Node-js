@@ -7,7 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import Cart from "components/MainLayout/components/Cart";
+import Cart from "../../../components/MainLayout/components/Cart";
 import {Link} from 'react-router-dom';
 import { themeX } from 'utils/theme/appTheme';
 
