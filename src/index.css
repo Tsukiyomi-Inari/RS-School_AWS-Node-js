@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+svg {
+  height: auto;
+  max-height: 4rem;
+}
+
+@media only screen and (max-width: 600px){
+  svg {
+    max-height: 2em;
+    width:auto;
+  }
+}

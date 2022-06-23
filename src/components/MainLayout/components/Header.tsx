@@ -1,5 +1,5 @@
 import React from 'react';
-import {createStyles, makeStyles, Theme, ThemeProvider} from '@material-ui/core/styles';
+import {createStyles, makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -10,6 +10,8 @@ import Menu from '@material-ui/core/Menu';
 import Cart from "../../../components/MainLayout/components/Cart";
 import {Link} from 'react-router-dom';
 import { themeX } from 'utils/theme/appTheme';
+import MyIcon from './icon';
+import ReactDOM from 'react-dom';
 
 
 
@@ -49,9 +51,9 @@ export default function Header() {
      <ThemeProvider theme={themeX}>
     <AppBar position="relative">
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
-          <Link className={classes.homeLink} to="/">My Store!</Link>
-        </Typography>
+        <div style={{float: "left", }} className={classes.title}>
+          <Link className={classes.homeLink} to="/" ><MyIcon /></Link>
+        </div>
 
         {auth && (
           <div>
