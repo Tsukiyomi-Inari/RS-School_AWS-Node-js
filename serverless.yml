@@ -1,6 +1,7 @@
 service: node-in-aws-web
 
-frameworkVersion: '3.19.0'
+fameworkVersion: '3'
+
 
 provider:
   name: aws
@@ -17,12 +18,12 @@ plugins:
 
 custom:
   client:
-    bucketName: node-in-aws-web-bucket101
-    distributionFolder: public
-  s3Bucket: node-in-aws-web-bucket
+  bucketName: node-in-aws-web-bucket102
+    distributionFolder: build
 
   ## Serverless-single-page-app-plugin configuration:
-  s3LocalPath: dist/
+  s3BucketName: ${self:custom.client.bucketName}
+  s3LocalPath: ${self:custom.client.distributionFolder}/
 
 resources:
   Resources:

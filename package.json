@@ -6,6 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy:s3": "serverless client deploy --no-config-change --no-policy-change --no-cors-change",
+    "build:deploy": "npm run build && npm run deploy:s3",
     "client:deploy": "sls client deploy --no-config-change --no-policy-change --no-cors-change",
     "client:deploy:nc": "npm run client:deploy -- --no-confirm",
     "client:build:deploy": "npm run build && npm run client:deploy",
@@ -32,12 +33,8 @@
     "@types/react-router-dom": "^5.1.5",
     "@types/yup": "^0.29.3",
     "axios": "^0.27.2",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
-    "enzyme-to-json": "^3.4.4",
-    "formik": "^2.1.5",
-    "formik-material-ui": "^2.0.1",
-    "lodash": "^4.17.19",
+    "enzyme" : "^3.11.0",
+    "enzyme-adapter-react-16":     "lodash": "^4.17.19",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
@@ -45,17 +42,13 @@
     "react-scripts": "^5.0.1",
     "serverless": "^3.19.0",
     "serverless-finch": "^4.0.0",
-    "typescript": "^4.7.3",
-    "yup": "^0.29.1"
+   "serverless-single-page-app-plugin": "file:./serverless-single-page-app-plugin"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "@types/jest": "^24.0.0": "react-app"
   },
   "jest": {
     "snapshotSerializers": [
