@@ -25,9 +25,8 @@ Cross-country global mentoring program which aims at improving corresponding han
 
 ## Screenshots
 
-![Comming Soon](/screenshots/1.png "Comming soon")
+![Main] "./screenshots/june22-2022-RS-nodejs-aws.png" alt="Main"/>
 
-![](/screenshots/2.png)
 
 ## Available Commands
 
