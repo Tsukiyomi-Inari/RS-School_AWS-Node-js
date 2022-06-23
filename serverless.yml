@@ -1,8 +1,7 @@
 service: node-in-aws-web
 
-fameworkVersion: '3'
 
-
+frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs17.x
@@ -18,8 +17,8 @@ plugins:
 
 custom:
   client:
-  bucketName: node-in-aws-web-bucket102
-    distributionFolder: build
+    bucketName: node-in-aws-web-bucket101
+  distributionFolder: build
 
   ## Serverless-single-page-app-plugin configuration:
   s3BucketName: ${self:custom.client.bucketName}

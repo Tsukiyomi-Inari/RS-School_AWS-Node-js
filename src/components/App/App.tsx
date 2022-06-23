@@ -13,14 +13,18 @@ import PageOrders from "../../components/pages/PageOrders/PageOrders";
 import PageOrder from "../../components/pages/PageOrder/PageOrder";
 import PageProductImport from "../../components/pages/admin/PageProductImport/PageProductImport";
 
+
+
 function App() {
 
   return (
     <Router>
       <Switch>
         <Route path="/">
-          <MainLayout>
-            <Route  path="/">
+
+          <MainLayout >
+            <Route exact path="/">
+
               <PageProducts/>
             </Route>
             <Route path={["/admin/product-form/:id", "/admin/product-form"]}>
