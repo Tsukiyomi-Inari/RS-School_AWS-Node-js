@@ -25,7 +25,7 @@ Cross-country global mentoring program which aims at improving corresponding han
 
 ## Screenshots
 
-![Main] "./screenshots/june22-2022-RS-nodejs-aws.png" alt="Main"/>
+<img src="./screenshots/june22-2022-RS-nodejs-aws.png" alt="Main"  style="height:844.5px; width:329px"/>
 
 
 ## Available Commands
