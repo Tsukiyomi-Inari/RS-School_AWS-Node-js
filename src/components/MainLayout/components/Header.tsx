@@ -9,7 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Cart from "../../../components/MainLayout/components/Cart";
 import {Link} from 'react-router-dom';
-import { themeX } from 'utils/theme/appTheme';
+import { themeX } from './theme/appTheme';
 import MyIcon from './icon';
 import ReactDOM from 'react-dom';
 

@@ -1,16 +1,18 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import {makeStyles, ThemeProvider} from '@material-ui/core/styles';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import {makeStyles, ThemeProvider,} from '@material-ui/core/styles';
 import Link from '@material-ui/core/Link';
 import Container from "@material-ui/core/Container";
-import Header from "components/MainLayout/components/Header";
-import { themeX } from 'utils/theme/appTheme';
+import Header from "./components/Header";
+import { themeX } from './components/theme/appTheme';
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright ©  Tsukiyomi-Inari'}
-      <Link color="inherit" href="https://material-ui.com/">
+      <Link color="inherit" href="https://github.com/Tsukiyomi-Inari">
+        <GitHubIcon></GitHubIcon>
         Tsukiyomi-Inari
       </Link>{' '}
       {new Date().getFullYear()}

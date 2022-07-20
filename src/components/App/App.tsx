@@ -20,26 +20,26 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
 
           <MainLayout >
             <Route exact path="/">
 
               <PageProducts/>
             </Route>
-            <Route path={["/admin/product-form/:id", "/admin/product-form"]}>
+            <Route exact path={["/admin/product-form/:id", "/admin/product-form"]}>
               <PageProductForm/>
             </Route>
-            <Route  path="/cart">
+            <Route  exact path="/cart">
               <PageCart />
             </Route>
-            <Route  path="/admin/orders">
+            <Route exact path="/admin/orders">
               <PageOrders />
             </Route>
-            <Route  path="/admin/order/:id">
+            <Route exact path="/admin/order/:id">
               <PageOrder />
             </Route>
-            <Route  path="/admin/products">
+            <Route exact path="/admin/products">
               <PageProductImport />
             </Route>
           </MainLayout>
