@@ -17,8 +17,8 @@ plugins:
 
 custom:
   client:
-  bucketName: node-in-aws-web-bucket101
-  distributionFolder: build
+    bucketName: node-in-aws-web-bucket101
+    distributionFolder: build
 
   ## Serverless-single-page-app-plugin configuration:
   s3BucketName: ${self:custom.client.bucketName}
